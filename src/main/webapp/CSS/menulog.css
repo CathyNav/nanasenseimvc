@@ -1,0 +1,81 @@
+:root {
+    --blackcours: rgb(55, 62, 105);
+    --flashcours: rgb(101, 113, 187);
+    --pastelcours: rgb(156, 165, 244);
+    --lightcours: rgb(237, 238, 255);
+
+    --blackboutique: rgb(117, 69, 56);
+    --flashboutique: rgb(246, 166, 151);
+    --pastelboutique: rgb(254, 197, 186);
+    --lightboutique: rgb(252, 243, 241);
+
+    --blackblog: rgb(124, 105, 40);
+    --flashblog: rgb(249, 232, 99);
+    --pastelblog: rgb(248, 232, 180);
+    --lightblog: rgb(255, 248, 226);
+
+    --blackconnexion: rgb(21, 97, 71);
+    --flashconnexion: rgb(45, 179, 133);
+    --pastelconnexion: rgb(125, 222, 199);
+    --lightconnexion: rgb(218, 252, 240);
+
+
+    @font-face {
+        font-family: 'Sailors';
+        src: url('fonts/Sailors-1.eot');
+        src: url('fonts/Sailors-1.eot?#iefix') format('embedded-opentype'),
+            url('fonts/Sailors-1.woff2') format('woff2'),
+            url('fonts/Sailors-1.woff') format('woff'),
+            url('fonts/Sailors-1.ttf') format('truetype'),
+            url('fonts/Sailors-1.svg#Sailors') format('svg');
+    }
+}
+main{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+   
+
+}
+.menulog{
+    width: 20%;
+    height: fit-content;
+    background: linear-gradient(0deg, var(--pastelcours)0%, var(--pastelboutique) 33%, var(--pastelblog)66%, var(--pastelconnexion)86%);
+    opacity: 0.9;
+    text-align: center;
+
+
+
+ul{
+    
+   li{
+    list-style: none;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+   
+    a{
+        font-family: 'Cherry Bomb One';
+        letter-spacing: 1px;
+        font-size: larger;
+        text-decoration: none;
+        
+        
+}
+}
+}
+}
+
+.account{
+            color:var(--blackconnexion) !important;
+        }
+.favoris{
+        color: var(--blackblog);
+        }
+
+.commande{
+         color:var(--blackboutique);
+        }
+
+.mescours{
+    color :var(--blackcours)
+}

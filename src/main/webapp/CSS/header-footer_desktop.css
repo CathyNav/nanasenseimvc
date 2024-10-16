@@ -1,0 +1,203 @@
+:root{
+    --blackcours : rgb(55,62,105);
+    --flashcours : rgb(101,113,187);
+    --pastelcours : rgb(156,165,244);
+    --lightcours : rgb(237,238,255);
+
+    --blackboutique: rgb(117,69,56);
+    --flashboutique: rgb(246, 166, 151);
+    --pastelboutique: rgb(254, 197, 186);
+    --lightboutique: rgb(252, 243, 241);
+
+    --blackblog: rgb(124, 105, 40);
+    --flashblog: rgb(249, 232, 99);
+    --pastelblog: rgb(248, 232, 180);
+    --lightblog: rgb(255, 248, 226);
+
+    --blackconnexion: rgb(21, 97, 71);
+    --flashconnexion: rgb(45, 179, 133);
+    --pastelconnexion: rgb(125, 222, 199);
+    --lightconnexion: rgb(218, 252, 240);
+
+
+@font-face {
+    font-family: 'Sailors';
+    src: url('fonts/Sailors-1.eot');
+    src: url('fonts/Sailors-1.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Sailors-1.woff2') format('woff2'),
+        url('fonts/Sailors-1.woff') format('woff'),
+        url('fonts/Sailors-1.ttf') format('truetype'),
+        url('fonts/Sailors-1.svg#Sailors') format('svg');
+            }
+        }
+
+        /* Header */
+
+.container1{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items:center;
+    max-width: 100%;
+    justify-content: space-around;
+    background : linear-gradient(90deg ,var(--pastelcours)0%, var(--pastelboutique) 33%, var(--pastelblog)66%, var(--pastelconnexion)86%); 
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    }
+
+.navigation{
+    display: flex;
+a{
+    padding : 1rem;
+    text-decoration: none;
+    font-family: 'cherry Bomb One';
+    letter-spacing: 1px;
+    text-align: center;
+}
+}
+
+.cours {
+    background-color: var(--lightcours);
+    border-radius: 50px;
+    border : 2px, solid, var(--flashcours);
+    margin-right: 2rem ;
+    padding: 3px 5px 6px 5px;
+ a{
+    color:var(--blackcours);
+    }
+}
+
+.boutique{
+    background-color: var(--lightboutique);
+    border-radius: 50px;
+    border: 2px, solid, var(--flashboutique);
+    margin-right:3rem ;
+    padding: 3px 5px 6px 5px;
+ a {
+    color: var(--blackboutique);
+    }
+}
+
+.blog {
+    background-color: var(--lightblog);
+    border-radius: 50px;
+    border: 2px, solid, var(--flashblog);
+    padding: 3px 5px 6px 5px;
+ a {
+    color: var(--blackblog) ;
+    }
+}
+.logged{
+	display: flex;
+	flex-direction: row;
+	flex-wrap:nowrap;	
+	align-items: center;
+}
+.connexion {
+    background-color: var(--lightconnexion);
+    border-radius: 50px;
+    border: 2px, solid, var(--flashconnexion);
+    padding: 3px 5px 6px 5px;
+ a {
+    color: var(--blackconnexion);
+    padding: 1rem;
+    text-decoration: none;
+    font-family: 'cherry Bomb One';
+    letter-spacing: 1px;
+    text-align: center;
+    }
+}
+
+.logout{
+	margin-left:1rem;
+	width:26px;
+	height:26px;
+}
+
+
+main{
+	background : none;
+}
+
+/* Footer */
+#footer{
+background: linear-gradient(90deg, var(--pastelcours)0%, var(--pastelboutique) 33%, var(--pastelblog)66%, var(--pastelconnexion)86%);
+}
+
+.footer {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    max-width: 100%;
+    justify-content: space-around;
+    margin-top:2rem;
+    margin-bottom: 2rem;
+}
+
+.menu ul li {
+    list-style: none;
+line-height: 1.5;
+/*     padding-left: 0rem; */
+/* 	padding-bottom: 0rem; */
+ a{
+    text-decoration: none;
+    color: var(--blackboutique);
+    font-family: 'cherry bomb one';
+    letter-spacing: 1px;
+    font-weight: bold;
+ }}
+ 
+.rs{
+	display:flex;
+	flex-direction:column;}
+
+.newsletter{
+    h3{
+        text-align: center;
+        color: var(--blackconnexion);
+        font-family: 'cherry bomb one';
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+    }
+    .adressemail{
+        border-radius: 50px;
+        border: 2px, solid, var(--flashconnexion);
+        background-color: var(--lightconnexion);
+        margin-bottom: 1rem;
+        padding: 5px;
+    
+    }
+    ::placeholder {
+        color: var(--blackconnexion);
+        font-family: 'Sailors';
+        font-size: 12px;
+        padding-left: 1rem;
+         }
+    
+    .ctaconnexion{
+        border-radius: 50px;
+        border: 2px, solid, var(--flashconnexion);
+        background-color: var(--lightconnexion);
+        margin-left: 117px;
+        text-align: center;
+        color: var(--blackconnexion);
+        font-family: 'cherry bomb one';
+        letter-spacing: 1px;
+        padding: 3px 5px 6px 7px;
+       
+    }
+
+}
+
+.legal{
+    text-align: center;
+    padding-bottom: 1rem;
+    font-family: 'Sailors';
+    font-size: 12px;
+
+ a{
+    text-decoration: none;
+    color: var(--blackboutique);
+ 
+ }
+}

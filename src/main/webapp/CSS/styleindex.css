@@ -1,0 +1,234 @@
+:root {
+    --blackcours: rgb(55, 62, 105);
+    --flashcours: rgb(101, 113, 187);
+    --pastelcours: rgb(156, 165, 244);
+    --lightcours: rgb(237, 238, 255);
+
+    --blackboutique: rgb(117, 69, 56);
+    --flashboutique: rgb(246, 166, 151);
+    --pastelboutique: rgb(254, 197, 186);
+    --lightboutique: rgb(252, 243, 241);
+
+    --blackblog: rgb(124, 105, 40);
+    --flashblog: rgb(249, 232, 99);
+    --pastelblog: rgb(248, 232, 180);
+    --lightblog: rgb(255, 248, 226);
+
+    --blackconnexion: rgb(21, 97, 71);
+    --flashconnexion: rgb(45, 179, 133);
+    --pastelconnexion: rgb(125, 222, 199);
+    --lightconnexion: rgb(218, 252, 240);
+
+
+    @font-face {
+        font-family: 'Sailors';
+        src: url('fonts/Sailors-1.eot');
+        src: url('fonts/Sailors-1.eot?#iefix') format('embedded-opentype'),
+            url('fonts/Sailors-1.woff2') format('woff2'),
+            url('fonts/Sailors-1.woff') format('woff'),
+            url('fonts/Sailors-1.ttf') format('truetype'),
+            url('fonts/Sailors-1.svg#Sailors') format('svg');
+    }
+}
+
+/*HERO style*/
+
+.hero {
+    width: 100%;
+    background: linear-gradient(90deg, var(--pastelcours)0%, var(--pastelboutique) 33%, var(--pastelblog)66%, var(--pastelconnexion)86%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    width: 100%;
+
+    padding-left: 6rem;
+    padding-top: 3rem;
+
+    p {
+        background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutique) 50%, var(--blackblog)80%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-family: 'cherry Bomb One';
+        letter-spacing: 1px;
+        text-align: center;
+    }
+}
+
+
+.titre {
+    width: 100%;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h1{
+        background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutique) 80%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-family: 'cherry Bomb One';
+            letter-spacing: 1px;
+            text-align: center;
+}
+
+.letsdraw{
+    width: 95%;
+    height: 100%;
+}
+
+.btndraw{
+background-color: transparent;
+border-radius: 50px;
+border: 2px solid var(--blackcours);
+margin-top: 3rem;
+margin-left: 45%;
+background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutique) 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+font-family: 'cherry Bomb One';
+letter-spacing: 1px;
+
+}
+
+/*Les cours style*/
+.containercours{
+    margin : 2rem 1rem 2rem 1rem;
+    background-color: var(--lightcours);
+    border-radius: 50px;
+    padding: 2rem 2rem 2rem 2rem;
+    display:flex ;
+    flex-direction: column;    
+}
+
+#titrecours{
+text-decoration: none;
+margin: 1rem 2rem 1rem 2rem;
+width: fit-content;
+border: solid;
+border-radius: 50px;
+border-color: var(--blackcours);
+background-color: var(--pastelcours);
+padding: 0.5rem 1rem 0.5rem 1rem;
+
+a {
+        text-decoration: none;
+        font-family: 'cherry Bomb One';
+        letter-spacing: 1px;
+        text-align: center;
+        color: var(--blackcours);
+    }
+
+}
+
+.firstline{
+display: flex;
+justify-content: space-around;
+margin-bottom: 2rem;
+align-items: center;
+}
+
+.textcours{
+width: 60ch;
+padding-top: 1rem;
+font-family: 'Sailors';
+text-align: center;
+color: var(--blackcours);
+}
+
+.illust{
+	max-width:80%;
+	max-height:80%;
+	
+}
+
+.map{
+	max-width:80%;
+	max-height:80%;
+	margin-left:1rem;
+}
+
+.secondline {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*La boutique style*/
+
+.containerboutique{
+    margin: 2rem 2rem 2rem 2rem;
+        background-color: var(--lightboutique);
+        border-radius: 50px;
+        padding: 2rem 2rem 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+}
+
+#titreboutique {
+    text-decoration: none;
+    margin: 2rem 2rem 2rem 2rem;
+    width: fit-content;
+    border: solid;
+    border-radius: 50px;
+    border-color: var(--blackboutique);
+    background-color: var(--pastelboutique);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+
+    a {
+        text-decoration: none;
+        font-family: 'cherry Bomb One';
+        letter-spacing: 1px;
+        text-align: center;
+        color: var(--blackboutique);
+    }
+
+}
+
+.cardproduit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 1rem 1rem 1rem 1rem;
+    border:solid;
+    border-color: var(--flashboutique);
+    border-radius: 50px;
+    }
+    
+.nomproduit{
+	font-family: 'cherry Bomb One';
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.description{
+    width: 50ch;
+    font-family: 'Sailors';
+    font-size: 15px;
+
+}
+
+.prix{
+	margin : 1rem 0.25rem 1rem 0.25rem;
+	width: 50ch;
+    font-family: 'Sailors';
+    font-size: 15px;
+    text-align: right;
+}

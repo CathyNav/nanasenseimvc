@@ -1,0 +1,154 @@
+:root {
+    --blackcours: rgb(55, 62, 105);
+    --flashcours: rgb(101, 113, 187);
+    --pastelcours: rgb(156, 165, 244);
+    --lightcours: rgb(237, 238, 255);
+
+    --blackboutique: rgb(117, 69, 56);
+    --flashboutique: rgb(246, 166, 151);
+    --pastelboutique: rgb(254, 197, 186);
+    --lightboutique: rgb(252, 243, 241);
+
+    --blackblog: rgb(124, 105, 40);
+    --flashblog: rgb(249, 232, 99);
+    --pastelblog: rgb(248, 232, 180);
+    --lightblog: rgb(255, 248, 226);
+
+    --blackconnexion: rgb(21, 97, 71);
+    --flashconnexion: rgb(45, 179, 133);
+    --pastelconnexion: rgb(125, 222, 199);
+    --lightconnexion: rgb(218, 252, 240);
+
+
+    @font-face {
+        font-family: 'Sailors';
+        src: url('fonts/Sailors-1.eot');
+        src: url('fonts/Sailors-1.eot?#iefix') format('embedded-opentype'),
+            url('fonts/Sailors-1.woff2') format('woff2'),
+            url('fonts/Sailors-1.woff') format('woff'),
+            url('fonts/Sailors-1.ttf') format('truetype'),
+            url('fonts/Sailors-1.svg#Sailors') format('svg');
+    }
+}
+
+h1{
+    margin: 2rem;
+    text-align: center;
+    color: var(--blackboutique);
+        font-family: 'cherry bomb one';
+        letter-spacing: 1px;
+        
+}
+/* barre de recherche*/
+.search-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin : 1rem;
+}
+
+.barresearch{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+     width: 75%;
+     display: flex;
+
+}
+input#recherche{
+    width:60%;
+}
+#recherche{
+    border: 4px solid var(--flashboutique);
+        border-radius: 50px;
+        background-color: var(--lightboutique);
+    margin-right: 2rem;}
+::placeholder{
+            padding: 1rem;
+            color: var(--blackboutique);
+        font-family: 'Sailors';       
+    opacity: 70%; }
+
+.tag{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#tags{
+    width: fit-content;
+    border: 2px solid var(--flashboutique);
+        border-radius: 50px;
+        background-color: var(--lightboutique);
+        margin-right: 2rem;
+        padding: 4px 8px;
+        color: var(--blackboutique);
+        font-family: 'Sailors';
+        letter-spacing: 1px;
+}
+
+.text{
+    color: var(--blackboutique);
+        font-family: 'cherry bomb one';
+        letter-spacing: 1px;
+        font-size: larger;
+        margin-right: 1rem;
+}
+
+/*Carte produit*/
+article{
+    width:80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+.productcard{
+    margin: 1rem;
+    max-width: 30%;
+border: 2px solid var(--flashboutique);
+    border-radius: 50px;
+    background-color: var(--lightboutique);
+    padding: 2rem;
+    color: var(--blackboutique);
+    flex: 1 1 30%;
+    display:flex;
+    flex-direction: column;
+    flex-wrap : nowrap;
+    justify-content: space-evenly;
+}
+
+.photocard{
+    width: 50%;
+    align-self: center;
+    margin-bottom: 1rem;
+
+    }
+
+.nomproduit{
+    max-width: 30ch;
+    font-family: 'cherry bomb one';
+    letter-spacing: 1px;
+    margin-bottom:1rem;
+
+}
+
+.descriptionproduit{
+    max-width: 30ch;
+    font-family: 'Sailors';
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.prix{
+   
+    text-align: right;
+    font-family: 'Sailors';
+    letter-spacing: 1px;
+}
