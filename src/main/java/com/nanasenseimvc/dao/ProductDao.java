@@ -48,4 +48,70 @@ public class ProductDao {
 			e.printStackTrace();
 		}
 		return products;
-}}
+}
+
+public Product getSingleProduct(int id) {
+	Product row = null;
+		
+		try {
+			query ="SELECT * FROM produit WHERE idProduit=? ";//le ? va chercher les info du u_id noté
+			pst= this.con.prepareStatement(query);
+			pst.setInt(1, id);
+			rs = pst.executeQuery();
+			
+			while (rs.next()) {
+				row = new Product();			
+				row.setId(rs.getInt("idProduit"));
+				row.setName(rs.getString("nomProduit"));
+				row.setCategory(rs.getString("descriptionProduit"));
+				row.setPrice(rs.getDouble("prixUnitaireProduit"));
+				row.setImage(rs.getString("photoProduit"));
+				}
+			}
+			catch (Exception e) {
+			e.getStackTrace();
+			System.out.println(e.getMessage());
+		}
+		return row;}
+
+public Product addProduct(String reference,String image, String nom, String description, double prix , int stock, String tags) {
+	Product product = null;
+	try {
+		query="insert into produit (reference,photoProduit,nomProduit,descriptionProduit,prixUnitaireProduit,stock, tags) values (?,?,?,?,?,?,?) ";
+		
+		pst=this.con.prepareStatement(query);
+		pst.setString(1, reference);
+		pst.setString(2, image);
+		pst.setString(3, nom);
+		pst.setString(4, description);
+		pst.setDouble(5, prix);
+		pst.setInt(6, stock);
+		pst.setString(7, tags);
+		
+		pst.executeUpdate();
+		
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+		System.out.println(e.getMessage());
+	}
+	return product;
+}
+
+public Product deleteProduct(int id) {
+	
+	Product product = null;
+	try {
+		query= "DELETE from produit WHERE idProduit=?;";
+		pst=this.con.prepareStatement(query);
+		pst.setInt(1, id);
+		pst.execute();
+	} catch (Exception e) {
+		
+	}
+
+return product;
+}
+
+}
+

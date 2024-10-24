@@ -9,6 +9,10 @@
     background-color: var(--lightconnexion);
     border-radius: 50px;
 } 
+li.account{
+	border : 3px solid var(--flashconnexion);
+}
+
 h1 {
     font-family: 'Cherry Bomb One';
     color: var(--blackconnexion);

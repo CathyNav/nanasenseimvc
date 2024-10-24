@@ -15,6 +15,7 @@
         <div class="logged">
         <div class="connexion"><a href="account.jsp"><%=auth.getPseudo() %></a></div>
         <a href="logout"><img class="logout" alt="déconnexion" src="images/icons8-éteindre-26.png" ></a></div>
+        <% if(auth.getRoles().equals("admin")){%><a href="../../admin/adminHome.jsp">Menu admin</a><%}%>
         <%}else{%>
         <div class="connexion"><a href="login.jsp">Connexion</a></div>
         <%} %>       

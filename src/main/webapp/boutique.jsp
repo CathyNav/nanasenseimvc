@@ -17,7 +17,7 @@ List<Product> products = prodd.getAllProducts();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nana-sensei - La boutique</title>
+<title>Nana-sensei | La boutique</title>
 <%@include file="includes/head.jsp" %>
 <style type="text/css">
 <%@include file="CSS/boutique.css"%>
@@ -25,48 +25,73 @@ List<Product> products = prodd.getAllProducts();
 </head>
 <body>
   <%@include file="includes/menu.jsp" %>
+<h1 id="boutique">Bienvenue sur la boutique de Nana-sensei !</h1>
 
   <div class="search-container">
     <div class="barresearch">
+
+
     <form action="boutique.jsp" method="post">
-        <input id="recherche" type="text" placeholder="Rechercher un article" name="search">
-        <button id="recherche" type="submit" href="boutique.jsp"><img src="images/loupe.png" alt="" width="30px" height="30px"></button>
-    </form>
-    
-    <div>
+        <input id="recherche" type="search" placeholder="Rechercher un article" name="search">
+        <button id="recherche" type="submit"><img src="images/loupe.png" alt="" width="30px" height="30px"></button>
+    </form>   
+     <div>
 <img id="panier" src="images/panier.png" alt="" width="40px" height="40px" >
 </div></div>
-<div class="tag">
+<!--<div class="tag">
     <p class="text">Tags : </p>
     <div id="tags"> #E-book</div>
     <div id="tags"> #papeterie</div>
     <div id="tags"> #fanart</div>
+</div>-->
 </div>
+        <%
+int  z=0;
+try{
+String search = request.getParameter("search");
+//like est pour une recherche  et '%"+XXX+"%' pour qu'il puisse chercher
+String query = "SELECT * from produit WHERE nomProduit like '%"+search +"%' or descriptionProduit like '%"+search+"%'";
+Connection con = DbCon.getConnection();
+Statement st = con.createStatement();
+ResultSet rs =st.executeQuery(query);%>
+<article>
+<% while(rs.next()){
+z=1;
+ if(z==1){%>
+
+<div class="productcard"><a href="productboutique.jsp?id=<%=rs.getString(1) %>">
+    <div class="photocard">
+    <img src="images/<%=rs.getString(3)%>" alt=""></div>
+    <h2 class="nomproduit"> <%=rs.getString(4) %></h2>
+    <p class="descriptionproduit"> <%=rs.getString(5) %></p>
+    <p class="prix"><%=rs.getString(6) %> €</p>
+    </a>
 </div>
 
+
+<% }}}catch (Exception e){
+	System.out.println(e.getMessage());
+}
+%>
+</article>
+<section>
 <article role="article">
-<%
+<% if(z==0){
 if(!products.isEmpty()){
 	for(Product p : products){ %>
-<div class="productcard">
+<div class="productcard"><a href="productboutique.jsp?id=<%=p.getId() %>">
     <div class="photocard">
     <img src="images/<%=p.getImage()%>" alt=""></div>
     <h2 class="nomproduit"> <%=p.getName() %></h2>
     <p class="descriptionproduit"> <%=p.getCategory() %></p>
     <p class="prix"><%=p.getPrice() %> €</p>
-    
+    </a>
 </div>
 <%
-}
-}
-%>
+}}
+} %>
 </article>
-
-</div>
-
-
-
-
+</section>
 
   <%@include file="includes/footer.jsp" %>
 </body>
