@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nana-sensei - Accueil</title>
+    <title>Nana-sensei | Accueil</title>
     
 <%@include file="includes/head.jsp" %>
 <style>
@@ -62,7 +62,7 @@
         </section>
         <section role="region" class="laboutique" aria-labelledby="titreboutique">
             <div class="containerboutique">
-                <h2 id="titreboutique"><a href="/boutique/Boutique.html">La boutique</a></h2>
+                <h2 id="titreboutique"><a href="boutique.jsp">La boutique</a></h2>
                 <div class="cardproduit">
                 <div class="card">
                     <div class="produits"> <img src="images/Rectangle 43.png" alt="photo du produit"></div>

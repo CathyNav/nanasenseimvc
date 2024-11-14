@@ -39,11 +39,16 @@
     align-items:center;
     max-width: 100%;
     justify-content: space-around;
-    background : linear-gradient(90deg ,var(--pastelcours)0%, var(--pastelboutique) 33%, var(--pastelblog)66%, var(--pastelconnexion)86%); 
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    background : linear-gradient(90deg ,var(--pastelcours)0%, var(--pastelboutique) 33%, var(--pastelblog)66%, var(--pastelconnexion)86%);
+    /*padding-top: 1rem;*/
+    /*padding-bottom: 1rem;*/
 
     }
+.logo{
+	display: block;
+	position: relative;
+	top : 2rem;
+}
 
 .navigation{
     display: flex;

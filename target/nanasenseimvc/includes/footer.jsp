@@ -3,7 +3,7 @@
             <div class="logo"> <a href="index.jsp"> <img src="images/logo.png" alt="" aria-hidden="true" width="150px" height="150px"></a>
             </div>
             <div class="menu">
-                <ul>
+                <ul class="menu">
                     <li><a href="cours.jsp">Cours</a></li>
                     <li><a href="boutique.jsp">Boutique</a></li>
                     <li><a href="blog.jsp">Blog</a></li>
@@ -22,5 +22,5 @@
                 <input class="ctaconnexion" type="submit" value="souscrire">
             </div>
         </div>
-        <P class="legal"> 2024 Nana-sensei | Tous droits réservés | <a href="#">Mentions légales</a> | <a href="#">Conditions générales de vente</a> | <a href="#">Confidentialité</a> </P>
+        <P class="legal"> 2024 Nana-sensei | Tous droits réservés | <a href="<%= request.getContextPath() %>/mentionslegales.jsp">Mentions légales</a>| <a href="#">Conditions générales de vente</a> | <a href="#">Confidentialité</a> </P>
     </footer>

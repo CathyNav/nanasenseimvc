@@ -101,20 +101,14 @@ input#recherche{
         margin-right: 1rem;
 }
 
-section{
-	background-color: var(--lightboutique);
-	border-radius : 50px;
-	margin:auto;
-	width : 85%;
-	display: flex;
-    flex-wrap: wrap;
-}
 /*Carte produit*/
 article{
-    width:90%;
+    width:80%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+
+
 }
 .productcard {
     margin: 1rem;

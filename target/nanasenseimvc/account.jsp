@@ -1,3 +1,4 @@
+<%@page import="com.nanasenseimvc.model.Client"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -40,9 +41,10 @@
     </div>
 </article>
 <article>
+
         <h2>Informations de facturation</h2>
         <form action="clientupdatedata" method="post">
-        <input name="id" type= "hidden" value="<%auth.getId();%>">
+        <input name="id"  value="<%=auth.getId() %>">
         <div class="infochange">        
         <div class="line1">
             <label for="nom">Votre nom</label><br>
@@ -80,7 +82,7 @@
             <button type="submit" class="ctalogin">Modifier</button>
         </form>
         </article>
-       	<a type="submit" class="supress" href="deleteaccount">Supprimer mon compte</a>
+       	<a type="submit" class="supress" href="deleteaccount?id=<%=auth.getId()%>">Supprimer mon compte</a>
 
     </section>
     </main>

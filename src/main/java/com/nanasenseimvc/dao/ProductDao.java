@@ -3,10 +3,13 @@ package com.nanasenseimvc.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.nanasenseimvc.model.Cart;
 import com.nanasenseimvc.model.Product;
+
 
 public class ProductDao {
 	private Connection con;
@@ -113,5 +116,42 @@ public Product deleteProduct(int id) {
 return product;
 }
 
-}
+public List<Cart> getCartProducts(ArrayList<Cart> cartList){
+	List<Cart> products = new ArrayList<Cart>();
+	try {
+		//Aller vérifier s'il y a des articles dans le panier
+		if(cartList.size()>0) {
+			//boucle sur tout les articles qui sont dans le panier
+			for (Cart item : cartList) {
+				query= "select*from produit where idProduit=?";
+				//requete préparée
+				pst =this.con.prepareStatement(query);
+				//REcupération id pour la mettre dans la requete
+				pst.setInt(1, item.getId());
+				rs=pst.executeQuery();
+				
+				//tant qu'il y a des articles
+				while(rs.next()) {
+					Cart row = new Cart();
+					row.setId(rs.getInt("idProduit"));
+					row.setName(rs.getString("nomProduit"));
+					row.setCategory(rs.getString("descriptionProduit"));
+					row.setPrice(rs.getDouble("prixUnitaireProduit")*item.getQuantity());
+					row.setImage(rs.getString("photoProduit"));
+					row.setQuantity(item.getQuantity());
+					products.add(row);
+				}
+				
+			}
+		}
+			
+		
+	} catch (SQLException e) {
+		e.printStackTrace();
+		System.out.println(e.getMessage());
+		
+	}
+	
+	return products;
+}}
 

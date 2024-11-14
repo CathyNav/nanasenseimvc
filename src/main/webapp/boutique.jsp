@@ -29,14 +29,12 @@ List<Product> products = prodd.getAllProducts();
 
   <div class="search-container">
     <div class="barresearch">
-
-
     <form action="boutique.jsp" method="post">
         <input id="recherche" type="search" placeholder="Rechercher un article" name="search">
         <button id="recherche" type="submit"><img src="images/loupe.png" alt="" width="30px" height="30px"></button>
     </form>   
-     <div>
-<img id="panier" src="images/panier.png" alt="" width="40px" height="40px" >
+     <div><a href="panier.jsp">
+<img class="panier" src="images/panier.png" alt="" width="40px" height="40px" ></a>
 </div></div>
 <!--<div class="tag">
     <p class="text">Tags : </p>
@@ -45,40 +43,12 @@ List<Product> products = prodd.getAllProducts();
     <div id="tags"> #fanart</div>
 </div>-->
 </div>
-        <%
-int  z=0;
-try{
-String search = request.getParameter("search");
-//like est pour une recherche  et '%"+XXX+"%' pour qu'il puisse chercher
-String query = "SELECT * from produit WHERE nomProduit like '%"+search +"%' or descriptionProduit like '%"+search+"%'";
-Connection con = DbCon.getConnection();
-Statement st = con.createStatement();
-ResultSet rs =st.executeQuery(query);%>
-<article>
-<% while(rs.next()){
-z=1;
- if(z==1){%>
-
-<div class="productcard"><a href="productboutique.jsp?id=<%=rs.getString(1) %>">
-    <div class="photocard">
-    <img src="images/<%=rs.getString(3)%>" alt=""></div>
-    <h2 class="nomproduit"> <%=rs.getString(4) %></h2>
-    <p class="descriptionproduit"> <%=rs.getString(5) %></p>
-    <p class="prix"><%=rs.getString(6) %> €</p>
-    </a>
-</div>
-
-
-<% }}}catch (Exception e){
-	System.out.println(e.getMessage());
-}
-%>
-</article>
-<section>
+<section role="region" >
 <article role="article">
-<% if(z==0){
+<%
 if(!products.isEmpty()){
 	for(Product p : products){ %>
+	
 <div class="productcard"><a href="productboutique.jsp?id=<%=p.getId() %>">
     <div class="photocard">
     <img src="images/<%=p.getImage()%>" alt=""></div>
@@ -87,8 +57,7 @@ if(!products.isEmpty()){
     <p class="prix"><%=p.getPrice() %> €</p>
     </a>
 </div>
-<%
-}}
+<%}
 } %>
 </article>
 </section>

@@ -1,7 +1,7 @@
   <%@page import="com.nanasenseimvc.model.User"%>
   <header role="banner">
         <div class="container1">
-            <div> <a href="index.jsp"> <img src="images/logo.png" class="logo" alt="" aria-hidden="true" width="150px" height="150px"></a>
+            <div> <a href="index.jsp"> <img src="images/logo.png" alt="" aria-hidden="true" width="150px" height="150px"></a>
             </div>
             <div class="navigation">
                 <div class="cours"><a href="cours.jsp" >Cours</a></div>
@@ -15,7 +15,6 @@
         <div class="logged">
         <div class="connexion"><a href="account.jsp"><%=auth.getPseudo() %></a></div>
         <a href="logout"><img class="logout" alt="déconnexion" src="images/icons8-éteindre-26.png" ></a></div>
-        <% if(auth.getRoles().equals("admin")){%><a href="<%= request.getContextPath() %>/admin/adminHome.jsp">Menu admin</a><%}%>
         <%}else{%>
         <div class="connexion"><a href="login.jsp">Connexion</a></div>
         <%} %>       

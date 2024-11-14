@@ -36,8 +36,7 @@ try{
     </form>
     
     <div>
-<a href="panier.jsp">
-<img class="panier" src="images/panier.png" alt="" width="40px" height="40px" ></a>
+<img class="panier" src="images/panier.png" alt="" width="40px" height="40px" >
 </div></div>
 <div class="tag">
     <p class="text">Tags : </p>

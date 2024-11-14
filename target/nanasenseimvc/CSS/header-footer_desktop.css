@@ -136,6 +136,9 @@ background: linear-gradient(90deg, var(--pastelcours)0%, var(--pastelboutique) 3
 
 .menu ul li {
     list-style: none;
+line-height: 1.5;
+/*     padding-left: 0rem; */
+/* 	padding-bottom: 0rem; */
  a{
     text-decoration: none;
     color: var(--blackboutique);

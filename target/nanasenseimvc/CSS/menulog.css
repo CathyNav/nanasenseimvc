@@ -47,6 +47,8 @@ main{
 
 
 ul{
+    padding-left: 0px;
+    margin:0px;
     
    li{
     list-style: none;
@@ -67,6 +69,7 @@ ul{
 
 .account{
             color:var(--blackconnexion) !important;
+            
         }
 .favoris{
         color: var(--blackblog);

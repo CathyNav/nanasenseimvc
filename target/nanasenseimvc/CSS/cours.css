@@ -1,0 +1,175 @@
+:root {
+    --blackcours: rgb(55, 62, 105);
+    --flashcours: rgb(101, 113, 187);
+    --pastelcours: rgb(156, 165, 244);
+    --lightcours: rgb(237, 238, 255);
+
+   
+    @font-face {
+        font-family: 'Sailors';
+        src: url('fonts/Sailors-1.eot');
+        src: url('fonts/Sailors-1.eot?#iefix') format('embedded-opentype'),
+            url('fonts/Sailors-1.woff2') format('woff2'),
+            url('fonts/Sailors-1.woff') format('woff'),
+            url('fonts/Sailors-1.ttf') format('truetype'),
+            url('fonts/Sailors-1.svg#Sailors') format('svg');
+    }
+}
+
+/*HERO style*/
+
+.hero {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    height: 100vh;
+    background: var(--pastelcours);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    max-width: 100%;
+    padding-left: 6rem;
+
+  
+}
+.text p {
+        background: var(--blackcours);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-family: 'cherry Bomb One';
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 25px;
+    }
+
+.titre {
+    width: 100%;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 3rem;
+    
+}
+
+h1{
+        background: var(--blackcours);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-family: 'cherry Bomb One';
+            letter-spacing: 1px;
+            text-align: center;
+}
+
+.letsdraw{
+    height: 100vh;
+}
+
+
+
+/*Les cours style*/
+.containercours{
+    margin : 2rem 2rem 2rem 2rem;
+    background-color: var(--lightcours);
+    border-radius: 50px;
+    padding: 2rem 2rem 2rem 2rem;
+     
+
+}
+.grid {
+    display: grid;
+        grid-template-columns: 5fr 5fr;
+        grid-template-rows: auto;
+        align-items: center;
+        justify-items: center;
+        row-gap: 2rem;
+
+}
+#titrecours{
+text-decoration: none;
+margin: 2rem 2rem 2rem 2rem;
+width: fit-content;
+border: solid;
+border-radius: 50px;
+border-color: var(--blackcours);
+background-color: var(--pastelcours);
+padding: 0.5rem 1rem 0.5rem 1rem;
+grid-column: 1;
+grid-row: 1;
+
+
+}
+h2{
+        text-decoration: none;
+        font-family: 'cherry Bomb One';
+        letter-spacing: 1px;
+        text-align: center;
+        color: var(--blackcours);
+    }
+
+.textcours{
+width: 60ch;
+padding-top: 1rem;
+font-family: 'Sailors';
+letter-spacing: 1px;
+text-align: center;
+color: var(--blackcours);
+grid-column: 1;
+grid-row: 2;
+}
+
+
+.illustgroup{
+    grid-column: 2;
+    grid-row: 2;
+  
+}
+.textacti{
+    width: 60ch;
+        padding-top: 1rem;
+        font-family: 'Sailors';
+        letter-spacing: 1px;
+        text-align: center;
+        color: var(--blackcours);
+        grid-column: 2;
+        grid-row: 3;
+}
+.illustacti{
+    grid-column: 1;
+        grid-row: 3;
+}
+
+.map{
+    grid-column: 2;
+        grid-row: 4;
+}
+.textmap{
+    width: 60ch;
+        padding-top: 1rem;
+        font-family: 'Sailors';
+        letter-spacing: 1px;
+        text-align: center;
+        color: var(--blackcours);
+        grid-column: 1;
+        grid-row: 4;
+}
+
+.contact{
+    text-decoration: none;
+        margin: 2rem 2rem 2rem 2rem;
+        width: fit-content;
+        border: solid;
+        border-radius: 50px;
+        border-color: var(--blackcours);
+        background-color: var(--pastelcours);
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        font-family: 'Sailors';
+        letter-spacing: 1px;
+}
