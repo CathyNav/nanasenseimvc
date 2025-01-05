@@ -40,7 +40,7 @@
     max-width: 100%;
     justify-content: space-around;
     background : linear-gradient(90deg ,var(--pastelcours)0%, var(--pastelboutique) 33%, var(--pastelblog)66%, var(--pastelconnexion)86%);
-    /*padding-top: 1rem;*/
+   padding : 10px;
     /*padding-bottom: 1rem;*/
 
     }
@@ -49,7 +49,15 @@
 	position: relative;
 	top : 2rem;
 }
-
+.navigation ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navigation ul li {
+    margin-left: 10px;
+}
 .navigation{
     display: flex;
 a{
@@ -59,7 +67,47 @@ a{
     letter-spacing: 1px;
     text-align: center;
 }
+
 }
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 500px) {
+    .navigation ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+    }
+
+    .navigation ul.active {
+        display: flex;
+    }
+
+    .navigation ul li {
+        margin: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
+
 
 .cours {
     background-color: var(--lightcours);
@@ -76,7 +124,7 @@ a{
     background-color: var(--lightboutique);
     border-radius: 50px;
     border: 2px, solid, var(--flashboutique);
-    margin-right:3rem ;
+    margin-right:2rem ;
     padding: 3px 5px 6px 5px;
  a {
     color: var(--blackboutique);
@@ -88,6 +136,7 @@ a{
     border-radius: 50px;
     border: 2px, solid, var(--flashblog);
     padding: 3px 5px 6px 5px;
+     margin-right:2rem ;
  a {
     color: var(--blackblog) ;
     }
@@ -118,6 +167,8 @@ a{
 	width:26px;
 	height:26px;
 }
+
+
 
 
 main{

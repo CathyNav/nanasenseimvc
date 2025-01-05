@@ -24,3 +24,6 @@
         </div>
         <P class="legal"> 2024 Nana-sensei | Tous droits réservés | <a href="<%= request.getContextPath() %>/mentionslegales.jsp">Mentions légales</a>| <a href="#">Conditions générales de vente</a> | <a href="#">Confidentialité</a> </P>
     </footer>
+    <script>
+    <%@ include file="../JavaScript/menuHamburger.js"%>
+    </script>

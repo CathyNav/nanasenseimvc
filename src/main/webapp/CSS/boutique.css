@@ -101,7 +101,7 @@ input#recherche{
         margin-right: 1rem;
 }
 
-section{
+section .laboutique{
 	background-color: var(--lightboutique);
 	border-radius : 50px;
 	margin:auto;
@@ -111,14 +111,15 @@ section{
 }
 /*Carte produit*/
 article{
-    width:90%;
+    width:80%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .productcard {
     margin: 1rem;
-    max-width: 30%;
+    max-width: 25%;
 border: 2px solid var(--flashboutique);
     border-radius: 50px;
     background-color: var(--lightboutique);
