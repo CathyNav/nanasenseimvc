@@ -7,7 +7,7 @@
     <title>Nana-sensei - Accueil</title>
     
     <style type="text/css">
-    <%@include file="../../CSS/header-footer_desktop.css" %>
+    <%@include file="../../CSS/header-footer.css" %>
     <%@include file="../../CSS/reset.css" %>
     </style>    
  <script src="https://kit.fontawesome.com/1ae84cb769.js" ></script>

@@ -42,8 +42,7 @@
 </div>
 <section role="region" >
 <article role="article">
-<%ProductDao prodd = new ProductDao(DbCon.getConnection());
-List<Product> products = prodd.getAllProducts();
+<%
 if(!products.isEmpty()){
 	for(Product p : products){ %>
 	

@@ -6,7 +6,7 @@
     
     <!-- Include CSS files -->    
     <style type="text/css">
-    <%@include file="../CSS/header-footer_desktop.css" %>
+    <%@include file="../CSS/header-footer.css" %>
     <%@include file="../CSS/reset.css" %>
     </style>    
     

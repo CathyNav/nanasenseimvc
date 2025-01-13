@@ -1,5 +1,4 @@
 /*HERO style*/
-
 .hero {
     width: 100%;
     background: linear-gradient(90deg, var(--pastelcours)0%, var(--pastelboutique) 33%, var(--pastelblog)66%, var(--pastelconnexion)86%);
@@ -8,13 +7,10 @@
     justify-content: space-between;
     align-items: center;
 }
-
 .text {
     width: 100%;
-
     padding-left: 6rem;
     padding-top: 3rem;
-
     p {
         background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutique) 50%, var(--blackblog)80%);
         background-clip: text;
@@ -25,8 +21,6 @@
         text-align: center;
     }
 }
-
-
 .titrehero {
     width: 100%;
     padding-top: 3rem;
@@ -36,7 +30,6 @@
     justify-content: space-evenly;
     align-items: center;
 }
-
 h1{
         background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutique) 80%);
             background-clip: text;
@@ -46,17 +39,16 @@ h1{
             letter-spacing: 1px;
             text-align: center;
 }
-
 .letsdraw{
     width: 95%;
     height: 100%;
 }
-
 .btndraw{
 background-color: transparent;
 border-radius: 50px;
 border: 2px solid var(--blackcours);
-margin-top: 3rem;
+margin-top: 1rem;
+margin-bottom:1rem;
 margin-left: 45%;
 background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutique) 80%);
     background-clip: text;
@@ -64,7 +56,12 @@ background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutiq
     color: transparent;
 font-family: 'cherry Bomb One';
 letter-spacing: 1px;
-
+transition: all 0.3s ease; /* Ajoute une transition fluide */
+}
+.btndraw:hover {
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    color: white;
 }
 
 /*Les cours style*/

@@ -1,4 +1,4 @@
-  <%@page import="com.nanasenseimvc.connection.DbCon"%>
+<%@page import="com.nanasenseimvc.connection.DbCon"%>
 <%@page import="com.nanasenseimvc.dao.ProductDao"%>
 <%@page import="com.nanasenseimvc.model.Product"%>
 <%@page import="java.util.List"%>
@@ -6,16 +6,17 @@
 <header role="banner">
     <div class="container1">
         <div>
-            <a href="index.jsp"> <img src="images/logo.png" class="logo" alt="" aria-hidden="true" width="150px" height="150px"></a>
+            <a href="index.jsp"> <img src="images/logo.png" class="logo" alt="" aria-hidden="true"></a>
         </div>
         <nav class="navigation">
-            <div class="burger-menu">            
-                <span></span>
-                <span></span>
-                <span></span>
-                
-                
-            </div>
+             <div class="burger-menu">
+        <span class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <span class="close-icon">&#x2715;</span>
+    </div>
             <ul>
                 <li class="cours"><a href="cours.jsp">Cours</a></li>
                 <li class="boutique"><a href="boutique.jsp">Boutique</a></li>
