@@ -17,65 +17,61 @@ import com.nanasenseimvc.dao.UserDao;
 import com.nanasenseimvc.model.Encryption;
 import com.nanasenseimvc.model.User;
 
-
+// Servlet mapping for user login
 @WebServlet ("/userlogin")
 public class LoginServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+    private static final long serialVersionUID = 1L;       
    
+    // Constructor
     public LoginServlet() {
         super();
-        
     }
-
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		response.sendRedirect("login.jsp");
-	}
-
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		response.setContentType("text/html; charset=UTF-8");
-		HttpSession session = request.getSession();
-		try (PrintWriter out=response.getWriter()){
-			String email= request.getParameter("login-email");
-			String password = request.getParameter("login-password");
-			String userPassword = Encryption.getSHA1(password);
-			
-			//out.print("This infos servlet : " + email + " "+ password);
-			
-				UserDao udao= new UserDao(DbCon.getConnection());
-				User user= udao.userLogin(email,userPassword);
-				
-				if (user != null) {
-				if (user.getRoles().equals("admin")) {
-					request.getSession().setAttribute("auth", user);
-					session.setAttribute("email", email);
-
-					System.out.print(" ADMIN Login: ");
-					System.out.print(" Admin: " + email + " logged in");
-					response.sendRedirect("admin/adminHome.jsp");
-				} else {
-					request.getSession().setAttribute("auth", user);
-					
-					response.sendRedirect("index.jsp");
-					System.out.print("CLIENT login");
-					System.out.print(" Client: " + email + " logged in");
-
-				}
-
-			} else {
-				response.sendRedirect("index.jsp?msg=WrongPasswordOrEmail");
-				System.out.print("erreur MDP ou em@il");
-			}
-
-			} catch (ClassNotFoundException | SQLException |NoSuchAlgorithmException  e) {
-				e.printStackTrace();
-			}
-		
-	}
-
+    
+    // Handle GET requests (redirect to login page)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.sendRedirect("login.jsp");
+    }
+    
+    // Handle POST requests (process login form)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    
+        response.setContentType("text/html; charset=UTF-8");
+        HttpSession session = request.getSession();
+        try (PrintWriter out = response.getWriter()) {
+            // Retrieve login form data
+            String email = request.getParameter("login-email");
+            String password = request.getParameter("login-password");
+            // Encrypt the password
+            String userPassword = Encryption.getSHA1(password);
+                        
+            // Authenticate user
+            UserDao udao = new UserDao(DbCon.getConnection());
+            User user = udao.userLogin(email, userPassword);
+            
+            if (user != null) {
+                if (user.getRoles().equals("admin")) {
+                    // Admin login
+                    request.getSession().setAttribute("auth", user);
+                    session.setAttribute("email", email);
+                    
+                    System.out.print(" ADMIN Login: ");
+                    System.out.print(" Admin: " + email + " logged in");
+                    response.sendRedirect("admin/adminHome.jsp");
+                } else {
+                    // Client login
+                    request.getSession().setAttribute("auth", user);
+                    response.sendRedirect("index.jsp");
+                    
+                    System.out.print("CLIENT login");
+                    System.out.print(" Client: " + email + " logged in");
+                }
+            } else {
+                // Login failed
+                response.sendRedirect("index.jsp?msg=WrongPasswordOrEmail");
+                System.out.print("Wrong password or email");
+            }
+        } catch (ClassNotFoundException | SQLException | NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }        
+    }
 }
-

@@ -1,5 +1,5 @@
+<%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
 <%@page import="com.nanasenseimvc.connection.DbCon"%>
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -9,77 +9,48 @@
 <head>
 <meta charset="UTF-8">
 <title>Gestion de la boutique | Nana-sensei</title>
+<!-- Include common head content -->
 <%@include file="../includes/head.jsp" %>
+<!-- Include CSS styles for this page -->
 <style>
     <%@include file="../CSS/adminboutique.css"%>
     <%@include file="../CSS/menulog.css"%>
     </style>
 </head>
 <body>
-
+<!-- Include admin menu -->
  <%@include file="adminmenu.jsp" %>
-<main role="banner">
+<main role="main">
+ <!-- Admin navigation menu -->
     <div class="menulog">
         <ul>
             <li class="account"><a href="adminUser.jsp" class="account"> Gestion des utilisateurs</a></li>
             <li ><a href="adminBlog.jsp" class="favoris"> Gestion des articles</a></li>
-            <li ><a href="adminboutique.jsp" class="commande">Gestion de la boutique</a></li>
+            <li class="commande"><a href="adminboutique.jsp" class="commande">Gestion de la boutique</a></li>
             <li ><a href="adminCours.jsp"class="mescours"> Gestion des cours </a></li>
         </ul>
     </div>
     	<div class="container">
 	<h1>Gestion de la boutique</h1>
-	<!--<div class="order">
-	<h2>Liste des commandes</h2>
-	<table>
-	<thead>
-	<tr>
-	<th scope="col">Pseudo</th>
-	<th scope="col">Mail</th>
-	<th scope="col">Nom</th>
-	<th scope="col">Prénom</th>
-	<th scope="col">Adresse postale</th>
-	<th scope="col">Code postale</th>
-	<th scope="col">Ville</th>
-	<th scope="col">Pays</th>
-	<th scope="col">Téléphone</th>
-	</tr>
-	</thead>
-	<tbody>
-	<% 
-	try{
-	Connection con= DbCon.getConnection();
-	Statement st=con.createStatement();
-	ResultSet rs=st.executeQuery("SELECT * from view_usersadmin");
-	while(rs.next()){
-	%>
 	
-<tr>
-	<td scope="col"><%=rs.getString(1) %></td>
-	<td scope="col"><%=rs.getString(2) %></td>
-	<td scope="col"><%=rs.getString(3) %></td>
-	<td scope="col"><%=rs.getString(4) %></td>
-	<td scope="col"><%=rs.getString(5) %></td>
-	<td scope="col"><%=rs.getString(6) %></td>
-	<td scope="col"><%=rs.getString(7) %></td>
-	<td scope="col"><%=rs.getString(8) %></td>
-	<td scope="col"><%=rs.getString(9) %></td>
-	</tr>
-	<%
-	}
-} catch (Exception e){
-System.out.println(e.getMessage());
-}
-%>
-	</tbody>
-	
-	</table>
-	</div>-->
-	<div class="produit">
-	<div class="titre">
 	<h2>Gestion des produits </h2>
-	
-	<div><a href="admincreaproduit.jsp"><i class="fa-solid fa-circle-plus"></i> Ajouter un nouveau produit</a></div></div>
+	<!-- Button to add a new product -->
+	<div>
+	<a href="admincreaproduit.jsp" class="addproduct"><i class="fa-solid fa-circle-plus"></i> Ajouter un nouveau produit</a>
+	</div>
+	<!-- Display status messages -->
+	<div class="valide">
+	<%
+		String msg =request.getParameter("msg");
+		if("done".equals(msg)){%>
+			<h2 class="done">Modifications effectuées</h2>
+		<%
+		}if("wrong".equals(msg)){		
+		%>
+		<h2 class="wrong">Il y a eu un problème. Merci de réessayer !</h2>
+			<%} %>
+			</div>
+	    <!-- Table to display products -->
 	<table>
 	<thead>
 	<tr>
@@ -97,18 +68,22 @@ System.out.println(e.getMessage());
 	<tbody>
 	<% 
 	try{
+		 // Establish database connection
 	Connection con= DbCon.getConnection();
-	Statement st=con.createStatement();
-	ResultSet rs=st.executeQuery("SELECT * from produit");
+	 // SQL query to select all products
+	 String query = "SELECT * from produit";	
+	PreparedStatement pst = con.prepareStatement(query);
+	ResultSet rs=pst.executeQuery();
+	 // Loop through each product in the result set
 	while(rs.next()){
 	%>
-	
+	<!-- Display product information in table rows -->
 <tr>
 	<td scope="col"><%=rs.getString(2) %></td>
 	<td scope="col"><%=rs.getString(8) %></td>
 	<td scope="col"><%=rs.getString(3) %></td>
 	<td scope="col"><%=rs.getString(4) %></td>
-	<td scope="col"><%=rs.getString(5) %></td>
+	<td scope="col" class="elipse"><%=rs.getString(5) %></td>
 	<td scope="col"><%=rs.getString(6) %></td>
 	<td scope="col"><%=rs.getString(7) %></td>
 	<td scope="col"><a href="editproduct.jsp?id=<%=rs.getString(1)%>"><i class="fa-solid fa-pen-to-square"></i></a></td>
@@ -120,13 +95,12 @@ System.out.println(e.getMessage());
 System.out.println(e.getMessage());
 }
 %>
-	</tbody>
-	
+	</tbody>	
 	</table>
-	</div>
 	
 	</div>
 </main>
+<!-- Include footer -->
  <%@include file="includes/footer.jsp" %>
 </body>
 </html>

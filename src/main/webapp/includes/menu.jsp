@@ -27,8 +27,8 @@
          User auth = (User)request.getSession().getAttribute("auth");
          if(auth !=null){
         %>
-                    <li class="connexion"><a href="account.jsp"><%= auth.getPseudo() %></a></li>
-                    <li><a href="logout"><img class="logout" alt="déconnexion" src="images/icons8-éteindre-26.png"></a></li>
+                    <li class="connexion"><a href="account.jsp"><%= auth.getPseudo() %></a>
+                    </li><a href="logout"><img class="logout" alt="déconnexion" src="images/icons8-éteindre-26.png"></a>
                     <% if(auth.getRoles().equals("admin")) { %>
                         <li><a href="<%= request.getContextPath() %>/admin/adminHome.jsp">Menu admin</a></li>
                     <% } %>

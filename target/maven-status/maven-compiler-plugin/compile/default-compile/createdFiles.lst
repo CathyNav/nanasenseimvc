@@ -12,8 +12,11 @@ com\nanasenseimvc\connection\DbCon.class
 com\nanasenseimvc\model\Product.class
 com\nanasenseimvc\model\Cart.class
 com\nanasenseimvc\controller\LogoutServlet.class
+com\nanasenseimvc\controller\QuantityIncDecServlet.class
 com\nanasenseimvc\controller\AddToCartServlet.class
 com\nanasenseimvc\controller\DeleteProductServlet.class
 com\nanasenseimvc\model\Encryption.class
+com\nanasenseimvc\controller\RemoveProductCartServlet.class
 com\nanasenseimvc\dao\ProductDao.class
+com\nanasenseimvc\controller\SearchProductServlet.class
 com\nanasenseimvc\model\Client.class

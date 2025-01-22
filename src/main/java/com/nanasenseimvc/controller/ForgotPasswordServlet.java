@@ -14,48 +14,46 @@ import com.nanasenseimvc.dao.UserDao;
 import com.nanasenseimvc.model.Encryption;
 import com.nanasenseimvc.model.User;
 
-@WebServlet ("/forgotpassword")
+// This servlet is mapped to the "/forgotpassword" URL
+@WebServlet("/forgotpassword")
 public class ForgotPasswordServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
        
-  
+    // Constructor
     public ForgotPasswordServlet() {
-        super();
-       
+        super();       
     }
 
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	response.setContentType("text/html; charset=UTF-8");
-		
-		try (PrintWriter out=response.getWriter()){
-			
-		//out.print("this is forgot password servlet");
-		
-		String email= request.getParameter("email");
-		String securityQuestion= request.getParameter("securityQuestion");
-		String answer= request.getParameter("answer");
-		String newPassword = request.getParameter("newPassword");
-		String userPassword = Encryption.getSHA1(newPassword);
-		
-		//je me connecte à la base de donnée
-		UserDao udao = new UserDao(DbCon.getConnection());
-		
-		User user = udao.userForgotPassword(email, securityQuestion, answer, userPassword);
-		System.out.print("User : "+ email+ " password changed !");
-		response.sendRedirect("login.jsp");
-		
-		} catch (Exception e) {
-			
-			System.out.print("No user register!");
-			response.sendRedirect("singup.jsp?msg=invalid");
-		}
-	}
+    // This method handles GET requests
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html; charset=UTF-8");        
+        try (PrintWriter out = response.getWriter()) {
+            // Get parameters from the request
+            String email = request.getParameter("email");
+            String securityQuestion = request.getParameter("securityQuestion");
+            String answer = request.getParameter("answer");
+            String newPassword = request.getParameter("newPassword");
+            
+            // Encrypt the new password
+            String userPassword = Encryption.getSHA1(newPassword);
+            
+            // Connect to the database
+            UserDao udao = new UserDao(DbCon.getConnection());
+            
+            // Attempt to change the user's password
+            boolean user = udao.userForgotPassword(email, securityQuestion, answer,userPassword);
+            
+            System.out.print("User : " + email + " password changed!");
+            response.sendRedirect("login.jsp");
+            
+        } catch (Exception e) {
+            System.out.print("No user registered!");
+            response.sendRedirect("singup.jsp?msg=invalid");
+        }
+    }
 
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		doGet(request, response);
-	}
-
+    // This method handles POST requests by calling doGet
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response);
+    }
 }

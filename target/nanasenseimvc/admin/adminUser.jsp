@@ -8,16 +8,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Nana-sensei | Gestion User</title>
+<title>Nana-sensei | User Management</title>
+
+<!-- Include common head elements -->
 <%@include file="../includes/head.jsp" %>
+<!-- Include CSS styles for this page -->
 <style>
     <%@include file="../CSS/adminUserCss.css"%>
     <%@include file="../CSS/menulog.css"%>
-    </style>
+</style>
 </head>
 <body>
- <%@include file="adminmenu.jsp" %>
+<!-- Include admin menu -->
+<%@include file="adminmenu.jsp" %>
 <main role="banner">
+    <!-- Side navigation menu for admin management sections -->
     <div class="menulog">
         <ul>
             <li class="account"><a href="adminUser.jsp" class="account"> Gestion des utilisateurs</a></li>
@@ -26,53 +31,59 @@
             <li ><a href="adminCours.jsp"class="mescours"> Gestion des cours </a></li>
         </ul>
     </div>
-	<div class="container6">
-	<h1>Gestion des utilisateurs</h1>
-	<table>
-	<thead>
-	<tr>
-	<th scope="col">Pseudo</th>
-	<th scope="col">Mail</th>
-	<th scope="col">Nom</th>
-	<th scope="col">Prénom</th>
-	<th scope="col">Adresse postale</th>
-	<th scope="col">Code postale</th>
-	<th scope="col">Ville</th>
-	<th scope="col">Pays</th>
-	<th scope="col">Téléphone</th>
-	</tr>
-	</thead>
-	<tbody>
-	<% 
-	try{
-	Connection con= DbCon.getConnection();
-	Statement st=con.createStatement();
-	ResultSet rs=st.executeQuery("SELECT * from view_usersadmin");
-	while(rs.next()){
-	%>
-	
-<tr>
-	<td scope="col"><%=rs.getString(1) %></td>
-	<td scope="col"><%=rs.getString(2) %></td>
-	<td scope="col"><%=rs.getString(3) %></td>
-	<td scope="col"><%=rs.getString(4) %></td>
-	<td scope="col"><%=rs.getString(5) %></td>
-	<td scope="col"><%=rs.getString(6) %></td>
-	<td scope="col"><%=rs.getString(7) %></td>
-	<td scope="col"><%=rs.getString(8) %></td>
-	<td scope="col"><%=rs.getString(9) %></td>
-	</tr>
-	<%
-	}
-} catch (Exception e){
-System.out.println(e.getMessage());
-}
-%>
-	</tbody>
-	
-	</table>
-	</div>
+    <!-- Main container for user management -->
+    <div class="container6">
+        <h1>Gestion des utilisateur</h1>
+        <!-- Table to display user information -->
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Pseudo</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prénom</th>
+                    <th scope="col">Adresse postale</th>
+                    <th scope="col">Code postale</th>
+                    <th scope="col">Ville</th>
+                    <th scope="col">Pays</th>
+                    <th scope="col">téléphone</th>
+                </tr>
+            </thead>
+            <tbody>
+            <!-- Fetch and display user data from the database -->
+            <% 
+            try {
+                // Establish a connection to the database
+                Connection con = DbCon.getConnection();
+                Statement st = con.createStatement();
+                // Execute a query to retrieve user data from the view
+                ResultSet rs = st.executeQuery("SELECT * from view_usersadmin");
+                while (rs.next()) {
+            %>
+            <!-- Populate table rows with user data -->
+            <tr>
+                <td scope="col"><%= rs.getString(1) %></td> <!-- Username -->
+                <td scope="col"><%= rs.getString(2) %></td> <!-- Email -->
+                <td scope="col"><%= rs.getString(3) %></td> <!-- Last Name -->
+                <td scope="col"><%= rs.getString(4) %></td> <!-- First Name -->
+                <td scope="col"><%= rs.getString(5) %></td> <!-- Postal Address -->
+                <td scope="col"><%= rs.getString(6) %></td> <!-- Postal Code -->
+                <td scope="col"><%= rs.getString(7) %></td> <!-- City -->
+                <td scope="col"><%= rs.getString(8) %></td> <!-- Country -->
+                <td scope="col"><%= rs.getString(9) %></td> <!-- Phone Number -->
+            </tr>
+            <% 
+            }
+            } catch (Exception e) {
+                // Handle exceptions and print error messages
+                System.out.println(e.getMessage());
+            }
+            %>
+            </tbody>
+        </table>
+    </div>
 </main>
- <%@include file="includes/footer.jsp" %>
+<!-- Include footer -->
+<%@include file="includes/footer.jsp" %>
 </body>
 </html>

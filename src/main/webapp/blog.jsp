@@ -10,7 +10,7 @@
 </head>
 <body>
    <%@include file="includes/menu.jsp" %>
-  
+  <i class="fa-solid fa-person-digging" style="color: #7c6928;"></i>
   <%@include file="includes/footer.jsp" %>
 </body>
 </html>

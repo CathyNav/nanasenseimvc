@@ -64,6 +64,24 @@
   	<description></description>
   	<servlet-class>com.nanasenseimvc.controller.AddToCartServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SearchProductServlet</servlet-name>
+  	<display-name>SearchProductServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.nanasenseimvc.controller.SearchProductServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>QuantityIncDecServlet</servlet-name>
+  	<display-name>QuantityIncDecServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.nanasenseimvc.controller.QuantityIncDecServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RemoveProductCartServlet</servlet-name>
+  	<display-name>RemoveProductCartServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.nanasenseimvc.controller.RemoveProductCartServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>LoginServlet</servlet-name>
   	<url-pattern>/user-login</url-pattern>
@@ -103,5 +121,17 @@
   <servlet-mapping>
   	<servlet-name>AddToCartServlet</servlet-name>
   	<url-pattern>/add-to-cart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SearchProductServlet</servlet-name>
+  	<url-pattern>/search-product</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>QuantityIncDecServlet</servlet-name>
+  	<url-pattern>/quantity-inc-dec</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RemoveProductCartServlet</servlet-name>
+  	<url-pattern>/remove-product-cart</url-pattern>
   </servlet-mapping>
 </web-app>

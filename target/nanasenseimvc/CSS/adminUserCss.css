@@ -1,4 +1,3 @@
-
 .container6{
     display: flex;
     flex-direction: column;
@@ -7,44 +6,32 @@
     margin : 2rem 2rem 2rem 2rem;
     padding: 2rem 2rem 2rem 2rem;
     background-color: var(--lightconnexion);
-    border-radius: 50px;
-} 
+    border-radius: 50px;} 
 li.account{
-	border : 3px solid var(--flashconnexion);
-}
-
+	border : 3px solid var(--flashconnexion);}
 h1 {
     font-family: 'Cherry Bomb One';
     color: var(--blackconnexion);
     letter-spacing: 2px;
     margin-bottom: 2rem;
-    font-size: 30px;
-}
-
+    font-size: 30px;}
 table{
     border-radius: 50px;
     border: 2px solid var(--blackconnexion);
-    padding: 1rem 1rem 1rem 1rem;
-}
-
+    padding: 1rem 1rem 1rem 1rem;}
 th{
     padding: 0.5rem;
     border-bottom: 2px solid var(--blackconnexion);
     font-family: 'Cherry Bomb One';
-        color: var(--blackconnexion);
-        letter-spacing: 2px;
-        margin-bottom: 2rem;
-        margin-right: 1rem;
-
-}
-
+    color: var(--blackconnexion);
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    margin-right: 1rem;}
 td{
     padding: 0.5rem;
     border-bottom: 1px solid var(--blackconnexion);
     font-family: 'Sailors';
-        color: var(--blackconnexion);
-        letter-spacing: 2px;
-        margin-bottom: 2rem;
-        margin-right: 1rem;
-    
-}
+    color: var(--blackconnexion);
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    margin-right: 1rem;}

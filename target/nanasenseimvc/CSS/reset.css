@@ -10,7 +10,8 @@
 /* Remove default padding */
 ul[class],
 ol[class] {
-    padding: 0;
+	padding:0;
+    padding-inline-start: 0;
 }
 
 /* Remove default margin */
@@ -50,12 +51,6 @@ ol[class] {
 /* A elements that don’t have a class get default styles */
 a:not([class]) {
     text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img {
-    max-width: 100%;
-    display: block;
 }
 
 /* Inherit fonts for inputs and buttons */

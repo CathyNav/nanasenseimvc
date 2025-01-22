@@ -8,6 +8,9 @@ C:\Users\stagiaire\eclipse-workspace\nanasenseimvc\src\main\java\com\nanasenseim
 C:\Users\stagiaire\eclipse-workspace\nanasenseimvc\src\main\java\com\nanasenseimvc\controller\ForgotPasswordServlet.java
 C:\Users\stagiaire\eclipse-workspace\nanasenseimvc\src\main\java\com\nanasenseimvc\controller\LoginServlet.java
 C:\Users\stagiaire\eclipse-workspace\nanasenseimvc\src\main\java\com\nanasenseimvc\controller\LogoutServlet.java
+C:\Users\stagiaire\eclipse-workspace\nanasenseimvc\src\main\java\com\nanasenseimvc\controller\QuantityIncDecServlet.java
+C:\Users\stagiaire\eclipse-workspace\nanasenseimvc\src\main\java\com\nanasenseimvc\controller\RemoveProductCartServlet.java
+C:\Users\stagiaire\eclipse-workspace\nanasenseimvc\src\main\java\com\nanasenseimvc\controller\SearchProductServlet.java
 C:\Users\stagiaire\eclipse-workspace\nanasenseimvc\src\main\java\com\nanasenseimvc\controller\SignUpServlet.java
 C:\Users\stagiaire\eclipse-workspace\nanasenseimvc\src\main\java\com\nanasenseimvc\dao\ClientDao.java
 C:\Users\stagiaire\eclipse-workspace\nanasenseimvc\src\main\java\com\nanasenseimvc\dao\ProductDao.java

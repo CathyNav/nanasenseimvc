@@ -3,9 +3,7 @@
     pageEncoding="UTF-8"%>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nana-sensei - Accueil</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <style type="text/css">
     <%@include file="../../CSS/header-footer.css" %>
     <%@include file="../../CSS/reset.css" %>

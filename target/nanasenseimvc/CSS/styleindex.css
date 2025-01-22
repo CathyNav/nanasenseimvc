@@ -1,38 +1,4 @@
-:root {
-    --blackcours: rgb(55, 62, 105);
-    --flashcours: rgb(101, 113, 187);
-    --pastelcours: rgb(156, 165, 244);
-    --lightcours: rgb(237, 238, 255);
-
-    --blackboutique: rgb(117, 69, 56);
-    --flashboutique: rgb(246, 166, 151);
-    --pastelboutique: rgb(254, 197, 186);
-    --lightboutique: rgb(252, 243, 241);
-
-    --blackblog: rgb(124, 105, 40);
-    --flashblog: rgb(249, 232, 99);
-    --pastelblog: rgb(248, 232, 180);
-    --lightblog: rgb(255, 248, 226);
-
-    --blackconnexion: rgb(21, 97, 71);
-    --flashconnexion: rgb(45, 179, 133);
-    --pastelconnexion: rgb(125, 222, 199);
-    --lightconnexion: rgb(218, 252, 240);
-
-
-    @font-face {
-        font-family: 'Sailors';
-        src: url('fonts/Sailors-1.eot');
-        src: url('fonts/Sailors-1.eot?#iefix') format('embedded-opentype'),
-            url('fonts/Sailors-1.woff2') format('woff2'),
-            url('fonts/Sailors-1.woff') format('woff'),
-            url('fonts/Sailors-1.ttf') format('truetype'),
-            url('fonts/Sailors-1.svg#Sailors') format('svg');
-    }
-}
-
 /*HERO style*/
-
 .hero {
     width: 100%;
     background: linear-gradient(90deg, var(--pastelcours)0%, var(--pastelboutique) 33%, var(--pastelblog)66%, var(--pastelconnexion)86%);
@@ -41,13 +7,10 @@
     justify-content: space-between;
     align-items: center;
 }
-
 .text {
     width: 100%;
-
     padding-left: 6rem;
     padding-top: 3rem;
-
     p {
         background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutique) 50%, var(--blackblog)80%);
         background-clip: text;
@@ -58,9 +21,7 @@
         text-align: center;
     }
 }
-
-
-.titre {
+.titrehero {
     width: 100%;
     padding-top: 3rem;
     display: flex;
@@ -69,7 +30,6 @@
     justify-content: space-evenly;
     align-items: center;
 }
-
 h1{
         background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutique) 80%);
             background-clip: text;
@@ -79,17 +39,16 @@ h1{
             letter-spacing: 1px;
             text-align: center;
 }
-
 .letsdraw{
     width: 95%;
     height: 100%;
 }
-
 .btndraw{
 background-color: transparent;
 border-radius: 50px;
 border: 2px solid var(--blackcours);
-margin-top: 3rem;
+margin-top: 1rem;
+margin-bottom:1rem;
 margin-left: 45%;
 background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutique) 80%);
     background-clip: text;
@@ -97,15 +56,20 @@ background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutiq
     color: transparent;
 font-family: 'cherry Bomb One';
 letter-spacing: 1px;
-
+transition: all 0.3s ease; /* Ajoute une transition fluide */
+}
+.btndraw:hover {
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    color: white;
 }
 
 /*Les cours style*/
 .containercours{
-    margin : 2rem 1rem 2rem 1rem;
+    margin : 2rem;
     background-color: var(--lightcours);
     border-radius: 50px;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 2rem;
     display:flex ;
     flex-direction: column;    
 }
@@ -131,15 +95,16 @@ a {
 }
 
 .firstline{
+width : 80%;
 display: flex;
 justify-content: space-around;
-margin-bottom: 2rem;
+margin: auto;
 align-items: center;
 }
 
 .textcours{
-width: 60ch;
-padding-top: 1rem;
+width: 50ch;
+padding: 1rem;
 font-family: 'Sailors';
 text-align: center;
 color: var(--blackcours);
@@ -151,32 +116,28 @@ color: var(--blackcours);
 	
 }
 
-.map{
-	max-width:80%;
-	max-height:80%;
-	margin-left:1rem;
-}
-
-.secondline {
-    display: flex;
-    justify-content: space-around;
-}
-
 
 /*La boutique style*/
+article{
+    width:80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
 
 .containerboutique{
-    margin: 2rem 2rem 2rem 2rem;
+    margin: 2rem ;
         background-color: var(--lightboutique);
         border-radius: 50px;
-        padding: 2rem 2rem 2rem 2rem;
+        padding: 2rem;
         display: flex;
         flex-direction: column;
 }
 
 #titreboutique {
     text-decoration: none;
-    margin: 2rem 2rem 2rem 2rem;
+    margin: 2rem;
     width: fit-content;
     border: solid;
     border-radius: 50px;
@@ -194,41 +155,52 @@ color: var(--blackcours);
 
 }
 
-.cardproduit{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.card{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding: 1rem 1rem 1rem 1rem;
-    border:solid;
-    border-color: var(--flashboutique);
+.productcard {
+    margin: 1rem;
+    max-width: 25%;
+border: 2px solid var(--flashboutique);
     border-radius: 50px;
-    }
-    
-.nomproduit{
-	font-family: 'cherry Bomb One';
-    letter-spacing: 1px;
-    text-align: center;
-    font-size: 20px;
+    background-color: var(--lightboutique);
+    padding: 1rem;
+    color: var(--blackboutique);
+    flex: 0 0 30%;
+    min-width: 25%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    a{
+    text-decoration: none;
+    text-align : center;
+    color: var(--blackboutique);
+    display : flex;
+    flex-direction : column;
+}
 }
 
-.description{
-    width: 50ch;
-    font-family: 'Sailors';
-    font-size: 15px;
+.photocard{
+    width: 50%;
+    align-self: center;
+    margin-bottom: 1rem;
 
+    }
+
+.nomproduit{
+    max-width: 30ch;
+    font-family: 'cherry bomb one';
+    letter-spacing: 1px;
+    margin-bottom:1rem;
+
+}
+
+.descriptionproduit{
+    max-width: 30ch;
+    font-family: 'Sailors';
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
 }
 
 .prix{
-	margin : 1rem 0.25rem 1rem 0.25rem;
-	width: 50ch;
-    font-family: 'Sailors';
-    font-size: 15px;
+   
     text-align: right;
-}
+    font-family: 'Sailors';
+    letter-spacing: 1px;}

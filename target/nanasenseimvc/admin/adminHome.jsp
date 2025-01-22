@@ -5,7 +5,7 @@
 <head>
 <%@include file="includes/head.jsp" %>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Accueil Admin | Nana-sensei</title>
 	<style>
     <%@include file="../CSS/menulog.css"%>
     </style>

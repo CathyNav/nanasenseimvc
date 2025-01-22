@@ -1,22 +1,24 @@
+// Package declaration
 package com.nanasenseimvc.model;
 
+// Cart class definition, extending the Product class
 public class Cart extends Product {
-	private int quantity;
+    // Private field to store the quantity of the product in the cart
+    private int quantity;
 
-	public int getQuantity() {
-		return quantity;
-	}
+    // Getter method for the quantity
+    public int getQuantity() {
+        return quantity;
+    }
 
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
+    // Setter method for the quantity
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 
-	public Cart() {
-		super();
-	}
-	
-
-	
-	
-
+    // Default constructor
+    public Cart() {
+        // Call the superclass (Product) constructor
+        super();
+    }
 }
