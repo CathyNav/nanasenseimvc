@@ -1,0 +1,175 @@
+@media screen and (max-width: 800px){
+/*HERO style*/
+.hero {
+    width: 100%;
+    background: linear-gradient(90deg, var(--pastelcours)0%, var(--pastelboutique) 33%, var(--pastelblog)66%, var(--pastelconnexion)86%);
+  	height: 50vh;
+}
+.text { 
+		width : 80%;
+		background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutique) 50%, var(--blackblog)80%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-family: 'cherry Bomb One';
+        letter-spacing: 1px;
+        text-align: center;
+        padding: 0;
+        margin: auto;
+}
+.titrehero {
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+h1{
+        background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutique) 80%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-family: 'cherry Bomb One';
+            letter-spacing: 1px;
+            text-align: center;
+}
+.letsdraw{
+    display:none;
+}
+.btndraw{
+background-color: transparent;
+border-radius: 50px;
+border: 2px solid var(--blackcours);
+margin:auto;
+background: -webkit-linear-gradient(left, var(--blackcours)0%, var(--blackboutique) 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+font-family: 'cherry Bomb One';
+letter-spacing: 1px;
+}
+/*Les cours style*/
+.containercours{
+    margin : 2rem;
+    background-color: var(--lightcours);
+    border-radius: 50px;
+    padding: 2rem;
+    display:flex ;
+    flex-direction: column;    
+}
+#titrecours{
+text-decoration: none;
+margin: 1rem 2rem 1rem 2rem;
+width: fit-content;
+border: solid;
+border-radius: 50px;
+border-color: var(--blackcours);
+background-color: var(--pastelcours);
+padding: 0.5rem 1rem 0.5rem 1rem;
+a {
+        text-decoration: none;
+        font-family: 'cherry Bomb One';
+        letter-spacing: 1px;
+        text-align: center;
+        color: var(--blackcours);
+    }
+}
+.firstline{
+width : 80%;
+display: flex;
+justify-content: space-around;
+margin: auto;
+align-items: center;
+}
+.textcours{
+width: 50ch;
+padding: 1rem;
+font-family: 'Sailors';
+text-align: center;
+color: var(--blackcours);
+}
+.illust{
+	max-width:80%;
+	max-height:80%;
+	display:none;
+}
+/*La boutique style*/
+article{
+    width:100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+.containerboutique{
+    margin: 2rem ;
+    background-color: var(--lightboutique);
+    border-radius: 50px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+#titreboutique {
+    text-decoration: none;
+    margin: 2rem;
+    width: fit-content;
+    border: solid;
+    border-radius: 50px;
+    border-color: var(--blackboutique);
+    background-color: var(--pastelboutique);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    a {
+        text-decoration: none;
+        font-family: 'cherry Bomb One';
+        letter-spacing: 1px;
+        text-align: center;
+        color: var(--blackboutique);
+    }
+}
+.productcard {
+    margin: auto;
+    margin-top: 15px;
+    max-width: 80%;
+	border: 2px solid var(--flashboutique);
+    border-radius: 50px;
+    background-color: var(--lightboutique);
+    padding: 1rem;
+    color: var(--blackboutique);
+    flex: 0 0 30%;
+    min-width: 30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    a{
+    text-decoration: none;
+    text-align : center;
+    color: var(--blackboutique);
+    display : flex;
+    flex-direction : column;
+	}
+}
+.photocard{
+    width: 50%;
+    align-self: center;
+    margin-bottom: 1rem;
+    }
+.nomproduit{
+    max-width: 30ch;
+    font-family: 'cherry bomb one';
+    letter-spacing: 1px;
+    margin-bottom:1rem;
+}
+.descriptionproduit{
+    max-width: 30ch;
+    font-family: 'Sailors';
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+.prix{
+    text-align: right;
+    font-family: 'Sailors';
+    letter-spacing: 1px;}
+}

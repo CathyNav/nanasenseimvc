@@ -1,0 +1,67 @@
+@charset "UTF-8";
+:root {
+    --blackcours: rgb(55, 62, 105);
+    --flashcours: rgb(101, 113, 187);
+    --pastelcours: rgb(156, 165, 244);
+    --lightcours: rgb(237, 238, 255);
+
+
+    @font-face {
+        font-family: 'Sailors';
+        src: url('fonts/Sailors-1.eot');
+        src: url('fonts/Sailors-1.eot?#iefix') format('embedded-opentype'),
+            url('fonts/Sailors-1.woff2') format('woff2'),
+            url('fonts/Sailors-1.woff') format('woff'),
+            url('fonts/Sailors-1.ttf') format('truetype'),
+            url('fonts/Sailors-1.svg#Sailors') format('svg');
+    }
+}
+h1{
+    padding-left: 6rem;
+        font-family: 'cherry Bomb One';
+        letter-spacing: 2px;
+        color: var(--blackcours);
+        padding-bottom: 2rem;
+        font-size: 30px;
+}
+
+.titre{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+ h2{
+    padding-left: 6rem;
+    font-family: 'cherry Bomb One';
+        letter-spacing: 2px;
+        color: var(--blackcours);
+        padding-bottom: 2rem;
+}
+article{
+margin: 2rem 2rem 2rem 2rem;
+    background-color: var(--lightcours);
+    border-radius: 50px;
+    padding: 2rem 2rem 2rem 2rem;
+
+}
+p{
+padding-left: 3rem;
+padding-bottom: 2rem;
+        font-family: 'Sailors';
+        letter-spacing: 1px;
+        color: var(--blackcours);
+        line-height: 2rem;
+}
+
+ul li{
+
+    margin-left: 3rem;
+    padding-bottom: 2rem;
+        font-family: 'Sailors';
+        letter-spacing: 1px;
+        color: var(--blackcours);
+        line-height: 2rem;
+}

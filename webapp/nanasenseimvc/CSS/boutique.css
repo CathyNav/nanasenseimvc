@@ -1,0 +1,275 @@
+h2{
+	margin: 2rem;
+    text-align: center;
+    color: var(--blackboutique);
+    font-family: 'Sailors';}
+#boutique{
+    margin: 2rem;
+    text-align: center;
+    color: var(--blackboutique);
+    font-family: 'cherry bomb one';
+    letter-spacing: 1px;}
+/* barre de recherche*/
+.search-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin : 1rem;}
+.barresearch{
+    display: flex;
+    justify-content: center;}
+form{
+    width: 75%;
+    display: flex;}
+input#recherche{
+    width:60%;}
+#recherche{
+    border: 4px solid var(--flashboutique);
+    border-radius: 50px;
+    background-color: var(--lightboutique);
+    margin-right: 2rem;}
+::placeholder{
+    padding: 1rem;
+    color: var(--blackboutique);
+    font-family: 'Sailors';       
+    opacity: 70%; }
+.tag{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;}
+#tags{
+    width: fit-content;
+    border: 2px solid var(--flashboutique);
+    border-radius: 50px;
+    background-color: var(--lightboutique);
+    margin-right: 2rem;
+    padding: 4px 8px;
+    color: var(--blackboutique);
+    font-family: 'Sailors';
+    letter-spacing: 1px;}
+.text{
+    color: var(--blackboutique);
+    font-family: 'cherry bomb one';
+    letter-spacing: 1px;
+    font-size: larger;
+    margin-right: 1rem;}
+.back{
+	display: flex;
+	justify-content: space-between;
+    align-items: center;}
+section .laboutique{
+	background-color: var(--lightboutique);
+	border-radius : 50px;
+	margin:auto;
+	width : 85%;
+	display: flex;
+    flex-wrap: wrap;}
+/*Carte produit*/
+article{
+    width:80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;}
+.productcard {
+    margin: 1rem;
+    max-width: 25%;
+	border: 2px solid var(--flashboutique);
+    border-radius: 50px;
+    background-color: var(--lightboutique);
+    padding: 2rem;
+    color: var(--blackboutique);
+    flex: 1 1 30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    a{
+    text-decoration: none;
+    color: var(--blackboutique);
+    display : flex;
+    flex-direction : column;}
+}
+.photocard{
+    width: 50%;
+    align-self: center;
+    margin-bottom: 1rem;}
+.nomproduit{
+    max-width: 30ch;
+    font-family: 'cherry bomb one';
+    letter-spacing: 1px;
+    margin-bottom:1rem;
+    color: var(--blackboutique);}
+.descriptionproduit{
+    max-width: 30ch;
+    font-family: 'Sailors';
+    letter-spacing: 1px;
+    margin-bottom: 1rem;}
+.prix{   
+    text-align: right;
+    font-family: 'Sailors';
+    letter-spacing: 1px;}
+/*page produit*/
+.produit{
+    width: 80%;
+    margin:auto;
+    padding: 2rem;
+    background-color: var(--lightboutique);
+    border-radius: 50px;  
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;}
+.link{
+	color: var(--blackboutique);
+	font-family: 'cherry bomb one';
+	letter-spacing: 1px;
+	text-decoration: none;}
+.titre{
+	width:40%;}
+#NomduProduit{
+    margin: 2rem;
+    color: var(--blackboutique);
+    font-family: 'cherry bomb one';
+    letter-spacing: 1px;}
+.product{
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   color: var(--blackboutique);}
+.descriptionproduit{
+	max-width : 30ch;
+	padding: 1rem;
+	color: var(--blackboutique);}
+.price{
+    text-align: center;
+    font-family: 'Sailors';
+    letter-spacing: 1px;
+    color: var(--blackboutique);}
+.quantite{
+    border: 2px solid var(--flashboutique);
+    border-radius: 50px;
+    background-color: var(--lightboutique);
+    width: 100%;
+    display:flex;
+    flex-wrap:nowrap;
+    align-items:center;
+    color: var(--blackboutique);}
+i{
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    color: var(--blackboutique);}
+.addtocart{
+    border: 2px solid var(--flashboutique);
+    border-radius: 50px;
+    background-color: var(--lightboutique);
+    padding: 8px;
+    align-self: flex-end;
+    font-family: 'cherry bomb one';
+    letter-spacing: 1px;
+    color: var(--blackboutique);
+	font-size: large;}
+.addtocart:hover {
+	border-radius: 50px;
+    background-color: var(--blackboutique);
+    color: white;}
+/*Panier*/
+#panier{
+	margin: 2rem;
+    text-align: center;
+    color: var(--blackboutique);
+    font-family: 'cherry bomb one';
+    letter-spacing: 1px;}
+.cartproduct{
+    display : flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--blackboutique);}
+.infoproduit{
+    display: flex;
+    margin: 1rem 0rem;}
+.total{
+	text-align:right;
+	color: var(--blackboutique);
+    font-family: 'cherry bomb one';
+    letter-spacing: 1px;
+    margin: 1rem 0rem;}
+    
+@media screen and (max-width: 800px){
+article{
+    width:100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;}
+.containerboutique{
+    margin: 2rem ;
+    background-color: var(--lightboutique);
+    border-radius: 50px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;}
+#titreboutique {
+    text-decoration: none;
+    margin: 2rem;
+    width: fit-content;
+    border: solid;
+    border-radius: 50px;
+    border-color: var(--blackboutique);
+    background-color: var(--pastelboutique);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    a {
+        text-decoration: none;
+        font-family: 'cherry Bomb One';
+        letter-spacing: 1px;
+        text-align: center;
+        color: var(--blackboutique);}
+}
+.productcard {
+    margin: auto;
+    margin-top: 15px;
+    max-width: 80%;
+	border: 2px solid var(--flashboutique);
+    border-radius: 50px;
+    background-color: var(--lightboutique);
+    padding: 1rem;
+    color: var(--blackboutique);
+    flex: 0 0 30%;
+    min-width: 30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    a{
+    text-decoration: none;
+    text-align : center;
+    color: var(--blackboutique);
+    display : flex;
+    flex-direction : column;}
+}
+.photocard{
+    width: 50%;
+    align-self: center;
+    margin-bottom: 1rem;}
+.nomproduit{
+    max-width: 30ch;
+    font-family: 'cherry bomb one';
+    letter-spacing: 1px;
+    margin-bottom:1rem;}
+.descriptionproduit{
+    max-width: 30ch;
+    font-family: 'Sailors';
+    letter-spacing: 1px;
+    margin-bottom: 1rem;}
+.prix{
+    text-align: right;
+    font-family: 'Sailors';
+    letter-spacing: 1px;}
+}
