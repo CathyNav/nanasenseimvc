@@ -19,7 +19,7 @@ public class DbCon {
             
             // Establish connection to the database
             // URL format: jdbc:mysql://host:port/database_name
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/nana_sensei", "root", "@Irfa2024!");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/nana_sensei", "root", "*********");
             
             // Print success message to console
             System.out.print("je suis connecté à la database! ");
